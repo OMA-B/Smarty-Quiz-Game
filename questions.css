@@ -1,0 +1,97 @@
+/* ---------- Variables ---------- */
+:root {
+    --background-color: #001C40;
+    --inner-background: #63E6BE;
+    --text-color1: #fff;
+    --text-color2: #74C0FC;
+}
+
+/* ---------- Reset ---------- */
+body, body * {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Signika Negative', sans-serif;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Signika Negative;
+    src: url(assets/Signika_Negative/SignikaNegative-VariableFont_wght.ttf);
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: var(--background-color);
+}
+
+body, .timer, .quiz-container, .question {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 80%;
+    height: 85%;
+    border-radius: 15px;
+    box-shadow: -5px -5px 5px black, 5px 5px 5px black, -5px 5px 5px black, 5px -5px 5px black;
+    background: var(--inner-background);
+    position: relative;
+}
+
+/* ---------- Intro Header ---------- */
+.intro {
+    position: absolute;
+    width: 85%;
+    left: 7.5%;
+    top: 3.5%;
+    color: var(--background-color);
+    text-align: center;
+    font-size: 5vw;
+}
+
+/* ---------- Timer ---------- */
+.timer {
+    position: absolute;
+    left: 40%;
+    top: 15%;
+    width: 15%;
+    height: 10%;
+    padding: 10%;
+    background: var(--background-color);
+    font-size: 7vw;
+    color: var(--text-color1);
+    border-radius: 50%;
+}
+
+/* ---------- Question container ---------- */
+.quiz-container {
+    background: var(--background-color);
+    position: absolute;
+    bottom: 3.5%;
+    left: 5%;
+    width: 90%;
+    height: 65%;
+}
+
+.quiz1 {
+    width: 90%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.question {
+    width: 100%;
+    height: 40%;
+    margin: 5% 0;
+    background: url(assets/img/test1_img.jpg) no-repeat;
+    background-size: cover;
+    color: var(--text-color1);
+    font-size: 5vw;
+    align-items: stretch;
+    text-align: center;
+}
