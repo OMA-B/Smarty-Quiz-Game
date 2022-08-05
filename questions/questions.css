@@ -71,7 +71,7 @@ body, .timer, .quiz-container, .question {
 /* ---------- Question container ---------- */
 .quiz-container {
     position: absolute;
-    bottom: 3.5%;
+    bottom: 2%;
     left: 5%;
     width: 90%;
     height: 65%;
@@ -90,7 +90,14 @@ body, .timer, .quiz-container, .question {
 .question {
     height: 35%;
     font-size: 5vw;
+    transition: all 0.8s;
 }
+
+.question:hover {
+    background: var(--background-color) !important;
+    align-items: center;
+}
+
 .question, .answer, .next, .next a {
     width: 100%;
     margin-bottom: 5%;
@@ -98,9 +105,13 @@ body, .timer, .quiz-container, .question {
     color: var(--text-color2);
     border-radius: 10px;
 }
-.answer, .next, .next a {
+.answer, .next a {
     background: var(--background-color);
     padding: 10px;
     font-size: 4vw;
     cursor: pointer;
+}
+
+.next {
+    display: flex;
 }
