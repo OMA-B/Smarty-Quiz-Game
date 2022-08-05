@@ -30,13 +30,50 @@ const answers = document.querySelectorAll('.answer');
 const correct_answers = ['Angel falls', 'Uranus', '1929', 'Hard to believe'];
 let score = 0;
 
-answers[0].addEventListener('click', (e) => {
+// for first option
+const first_answer = () => {
     correct_answers.forEach(answer => {
-        if (answer === answers[0].textContent.toString()) {
-            console.log('SMARTY!!!');
+        if (answer === answers[0].textContent) {
+            score++;
         };
     });
-    e.target.style.background = '#74C0FC';
-    e.target.style.color = '#001C40';
-    e.target.style.transition = 'all 0.8s';
-});
+    answers[0].style.background = '#74C0FC';
+    answers[0].style.color = '#001C40';
+    answers[0].style.transition = 'all 0.8s';
+    // to make the answer clickable once
+    answers[0].removeEventListener('click', first_answer);
+};
+
+answers[0].addEventListener('click', first_answer);
+
+// for second option
+const second_answer = () => {
+    correct_answers.forEach(answer => {
+        if (answer === answers[1].textContent) {
+            score++;
+        };
+    });
+    answers[1].style.background = '#74C0FC';
+    answers[1].style.color = '#001C40';
+    answers[1].style.transition = 'all 0.8s';
+    // to make the answer clickable once
+    answers[1].removeEventListener('click', second_answer);
+};
+
+answers[1].addEventListener('click', second_answer);
+
+// for third option
+const third_answer = () => {
+    correct_answers.forEach(answer => {
+        if (answer === answers[2].textContent) {
+            score++;
+        };
+    });
+    answers[2].style.background = '#74C0FC';
+    answers[2].style.color = '#001C40';
+    answers[2].style.transition = 'all 0.8s';
+    // to make the answer clickable once
+    answers[2].removeEventListener('click', third_answer);
+};
+
+answers[2].addEventListener('click', third_answer);
