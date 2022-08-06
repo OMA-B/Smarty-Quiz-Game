@@ -90,7 +90,6 @@ body, .timer, .quiz-container, .question {
 .question {
     height: 35%;
     font-size: 5vw;
-    transition: all 0.8s;
 }
 
 .question:hover {
@@ -104,6 +103,7 @@ body, .timer, .quiz-container, .question {
     text-align: center;
     color: var(--text-color2);
     border-radius: 10px;
+    transition: all 0.8s;
 }
 .answer, .next a {
     background: var(--background-color);
@@ -114,4 +114,10 @@ body, .timer, .quiz-container, .question {
 
 .next {
     display: flex;
+}
+
+.answer:hover, .next a:hover {
+    background: var(--text-color2);
+    color: var(--background-color);
+    transform: scale(1.2);
 }
