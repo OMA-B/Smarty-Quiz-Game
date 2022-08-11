@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smarty ScoreBoard</title>
     <link rel="stylesheet" href="scoreboard.css">
-    <!-- <link rel="stylesheet" href="../assets/css/all.min.css">
-    <link rel="stylesheet" href="../assets/css/fontawesome.min.css"> -->
+    <link rel="stylesheet" href="../../assets/css/all.min.css">
+    <link rel="stylesheet" href="../../assets/css/fontawesome.min.css">
 </head>
 <body>
     
@@ -16,21 +16,56 @@
         <h1 class="intro">Score Board</h1>
         <h2 class="intro">Hurray!<br>You're Here!</h2>
         
-        <!-- Timer -->
+        <!-- score display -->
         <div class="score">You scored<br><span>25</span>%</div>
 
-        <!-- Question number Header -->
-        <h2 class="intro">Question 1 of 4</h2>
         <!-- Question container -->
         <section class="quiz-container">
-            <span class="quiz1">
+            <!-- Review Questions -->
+            <div class="review-question">
+                <p>To view solutions, click the arrow icon...</p>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+
+            <div class="quiz1">
+                <!-- Question number Header -->
+                <h2 class="intro">Question 1 of 4</h2>
                 <div class="question" style="background: url(../../assets/img/test1_img.jpg) no-repeat; background-size: 100% 100%;">Which is the highest waterfall in the world?</div>
                 <div class="answer">Angel falls</div>
                 <div class="answer">Victoria falls</div>
                 <div class="answer">Niagara falls</div>
-            </span>
+            </div>
+
+            <div class="quiz2">
+                <!-- Question number Header -->
+                <h2 class="intro">Question 2 of 4</h2>
+                <div class="question" style="background: url(../../assets/img/test2_img.jpg) no-repeat; background-size: 100% 100%;">Which is the coldest planet in the universe?</div>
+                <div class="answer">Neptune</div>
+                <div class="answer">Pluto</div>
+                <div class="answer">Uranus</div>
+            </div>
+
+            <div class="quiz3">
+                <!-- Question number Header -->
+                <h2 class="intro">Question 3 of 4</h2>
+                <div class="question" style="background: url(../../assets/img/test3_img.jpg) no-repeat; background-size: 100% 100%;">In which year was Martin Luther King Junior born?</div>
+                <div class="answer">1929</div>
+                <div class="answer">1915</div>
+                <div class="answer">1945</div>
+            </div>
+
+            <div class="quiz4">
+                <!-- Question number Header -->
+                <h2 class="intro">Question 4 of 4</h2>
+                <div class="question" style="background: url(../../assets/img/test4_img.jpg) no-repeat; background-size: 100% 100%;">What is the meaning of this idiomatic expression "strain credulity"?</div>
+                <div class="answer">To think too hard</div>
+                <div class="answer">Hard to believe</div>
+                <div class="answer">Run at a very fast speed</div>
+            </div>
         </section>
     </div>
+
+    <h1 class="caution">Oops! <br>Please use screen width lesser than 930px!!!</h1>
 
     <script src="scoreboard.js"></script>
 </body>

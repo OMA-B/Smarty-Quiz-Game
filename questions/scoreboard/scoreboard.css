@@ -1,9 +1,14 @@
+/* ---------- Default Screen Width was 400px ---------- */
+
 /* ---------- Variables ---------- */
 :root {
     --background-color: #001C40;
     --inner-background: #63E6BE;
     --text-color1: #fff;
     --text-color2: #74C0FC;
+    --header-font-size: 7vw;
+    --text-font-size: 5vw;
+    --smaller-font-size: 4vw;
 }
 
 /* ---------- Reset ---------- */
@@ -39,12 +44,13 @@ body {
 .intro {
     color: var(--background-color);
     text-align: center;
-    font-size: 5vw;
+    font-size: var(--text-font-size);
+    margin-top: 10px;
 }
 
-.intro:first-child, .score span {
+.container > .intro:first-child, .score span {
     color: red;
-    font-size: 7vw;
+    font-size: var(--header-font-size);
 }
 
 /* ---------- Score Display ---------- */
@@ -54,31 +60,71 @@ body {
     margin: 20px auto;
     padding: 10px;
     background: var(--background-color);
-    font-size: 5vw;
+    font-size: var(--text-font-size);
     color: var(--text-color1);
     border-radius: 20%;
 }
 
-/* ---------- Question container ---------- */
+/* ---------- Review Questions ---------- */
+.review-question {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.review-question p, .review-question i {
+    font-size: var(--smaller-font-size);
+    color: var(--background-color);
+    padding: 10px;
+    width: 80%;
+    border-radius: 8px;
+    align-self: center;
+    font-weight: bolder;
+}
+
+.review-question i {
+    display: flex;
+    justify-content: center;
+    width: 10%;
+    height: 10%;
+    margin-right: 10px;
+    font-size: var(--text-font-size);
+    transition: all 1s;
+    cursor: pointer;
+}
+
+/* ---------- Question Display ---------- */
 .quiz-container {
     width: 90%;
     margin: 10px auto;
+    height: 90px;
     overflow: hidden;
+    transition: all 1s;
+}
+
+.open {
+    width: 90%;
+    margin: 10px auto;
+    height: 1580px;
+    overflow: hidden;
+    transition: all 1s;
 }
 
 .quiz1, .quiz2, .quiz3, .quiz4 {
-    width: 90%;
+    width: 100%;
+    margin: auto;
+}
+
+.quiz2 .question, .quiz3 .question {
+    align-items: flex-end;
 }
 
 .question {
     display: flex;
     align-items: center;
-    height: 120px;
-    font-size: 5vw;
-}
-
-.quiz2 .question, .quiz3 .question {
-    align-items: flex-end;
+    height: 170px;
+    font-size: var(--text-font-size);
 }
 
 .question:hover {
@@ -94,14 +140,77 @@ body {
     border-radius: 10px;
     transition: all 0.8s;
 }
-.answer, .next a {
+.answer {
     background: var(--background-color);
     padding: 10px;
-    font-size: 4vw;
+    font-size: var(--smaller-font-size);
 }
 
-.answer:hover, .next a:hover {
-    background: var(--text-color2);
-    color: var(--background-color);
-    transform: scale(1.2);
+/* ---------- Trying to adjust quiz-container height 
+                to keep transition effect 
+                as well as width and display ---------- */
+
+@media screen and (max-width: 360px) {
+    .open {
+        height: 1510px;
+    }
+
+    .caution {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 360px) {
+    .caution {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 411px) {
+    .open {
+        height: 1640px;
+    }
+}
+
+@media screen and (min-width: 458px) {
+    .open {
+        height: 1720px;
+    }
+}
+
+@media screen and (min-width: 511px) {
+    .container {
+        width: 400px;
+    }
+
+    .open {
+        height: 1740px;
+    }
+
+    .intro, .question, .score {
+        font-size: 25.25px;
+    }
+
+    .answer, .review-question p {
+        font-size: 20.2px;
+    }
+
+    .container > .intro:first-child, .score span {
+        font-size: 35.35px;
+    }
+}
+
+@media screen and (min-width: 930px) {
+    .container {
+        display: none;
+    }
+
+    .caution {
+        display: block;
+        width: 80%;
+        text-align: center;
+        margin: 20% auto;
+        color: var(--text-color2);
+        font-size: var(--text-font-size);
+    }
 }
