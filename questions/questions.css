@@ -4,6 +4,9 @@
     --inner-background: #63E6BE;
     --text-color1: #fff;
     --text-color2: #74C0FC;
+    --header-font-size: 7vw;
+    --text-font-size: 5vw;
+    --smaller-font-size: 4vw;
 }
 
 /* ---------- Reset ---------- */
@@ -51,7 +54,7 @@ body, .timer, .quiz-container, .question {
     top: 3.5%;
     color: var(--background-color);
     text-align: center;
-    font-size: 5vw;
+    font-size: var(--text-font-size);
 }
 
 /* ---------- Timer ---------- */
@@ -63,7 +66,7 @@ body, .timer, .quiz-container, .question {
     height: 10%;
     padding: 10%;
     background: var(--background-color);
-    font-size: 7vw;
+    font-size: var(--header-font-size);
     color: var(--text-color1);
     border-radius: 50%;
 }
@@ -89,7 +92,7 @@ body, .timer, .quiz-container, .question {
 
 .question {
     height: 35%;
-    font-size: 5vw;
+    font-size: var(--text-font-size);
 }
 
 .question:hover {
@@ -108,7 +111,7 @@ body, .timer, .quiz-container, .question {
 .answer, .next a {
     background: var(--background-color);
     padding: 10px;
-    font-size: 4vw;
+    font-size: var(--smaller-font-size);
     cursor: pointer;
 }
 

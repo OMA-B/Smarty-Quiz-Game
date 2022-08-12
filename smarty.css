@@ -1,0 +1,171 @@
+/* ---------- Variables ---------- */
+:root {
+    --background-color: #001C40;
+    --inner-background: #63E6BE;
+    --text-color1: #fff;
+    --text-color2: #74C0FC;
+    --header-font-size: 10vw;
+    --text-font-size: 5vw;
+    --smaller-font-size: 4vw;
+}
+
+/* ---------- Reset ---------- */
+body, body * {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Signika Negative', sans-serif;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Signika Negative;
+    src: url(assets/Signika_Negative/SignikaNegative-VariableFont_wght.ttf);
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: var(--background-color);
+}
+
+body, .timer, .quiz-container, .question {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 80%;
+    height: 85%;
+    border-radius: 15px;
+    box-shadow: -5px -5px 5px black, 5px 5px 5px black, -5px 5px 5px black, 5px -5px 5px black;
+    background: var(--inner-background);
+    position: relative;
+}
+
+/* ---------- Logo Display ---------- */
+.logo-wrapper {
+    width: 80%;
+    position: absolute;
+    top: 3%;
+    left: 10%;
+}
+
+.logo-wrapper img {
+    width: 100%;
+}
+
+.logo-wrapper h1 {
+    font-size: var(--header-font-size);
+    text-align: center;
+    line-height: 30px;
+    color: var(--background-color);
+    letter-spacing: 10px;
+    text-shadow: -3px -4px #737373;
+    transform: translateX(-40px) rotateZ(30deg);
+    transform-origin: top;
+    animation: swing 2s ease-in-out alternate infinite;
+}
+
+.logo-wrapper h1 span {
+    font-size: 15vw;
+    color: red;
+}
+
+/* ---------- Logo Text Swinging Animation ---------- */
+@keyframes swing {
+    0%{transform: translateX(-30px) rotateZ(30deg);}
+    100%{transform: translateX(35px) rotateZ(-30deg);}
+}
+
+/* ---------- Instructions Section ---------- */
+.instruction {
+    width: 85%;
+    position: absolute;
+    top: 47%;
+    left: 7.5%;
+}
+
+.instruction h2 {
+    font-size: var(--text-font-size);
+    color: var(--background-color);
+}
+
+.instruction p {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    font-size: var(--smaller-font-size);
+    padding: 10px;
+    margin-top: 10px;
+    background-color: var(--background-color);
+    color: var(--text-color2);
+    border-radius: 10px;
+}
+
+/* ---------- Start Button ---------- */
+.start-button {
+    text-align: center;
+    width: 40%;
+    font-size: var(--text-font-size);
+    background: var(--background-color);
+    color: var(--text-color2);
+    padding: 30px;
+    border-radius: 40%;
+    position: absolute;
+    bottom: 10%;
+    left: 30%;
+    transition: all 0.6s;
+}
+
+.start-button:hover {
+    transform: scale(1.2);
+}
+
+/* ---------- Trying to adjust width and display ---------- */                
+@media screen and (min-width: 250px) {
+    .caution {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 511px) {
+    .container {
+        width: 400px;
+    }
+
+    .logo-wrapper h1 span {
+        font-size: 76.65px;
+    }
+
+    .logo-wrapper h1 {
+        font-size: 51.1px;
+    }
+
+    .instruction h2, .start-button {
+        font-size: 25.55px;
+    }
+
+    .instruction p {
+        font-size: 19px;
+    }
+}
+
+@media screen and (min-width: 930px) {
+    .container {
+        display: none;
+    }
+
+    .caution {
+        display: block;
+        width: 80%;
+        text-align: center;
+        margin: 20% auto;
+        color: var(--text-color2);
+        font-size: var(--text-font-size);
+    }
+}

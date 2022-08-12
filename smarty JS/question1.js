@@ -1,4 +1,4 @@
-// const tips = [`Time to test your IQ Level, by answering in 15s!`, 
+// const tips = [`Time to test your IQ Level, by answering in 20s!`, 
 //             `You can tap on or hover over the question to alter background.`];
 
 // setting custom timer countdown...
