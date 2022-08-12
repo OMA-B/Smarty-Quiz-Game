@@ -146,6 +146,14 @@ body {
     font-size: var(--smaller-font-size);
 }
 
+/* ---------- Giving courtesy by Typed.Js ---------- */
+.courtesy {
+    color: var(--text-color1);
+    text-align: center;
+    font-size: 4vw;
+    margin-top: 10px;
+}
+
 /* ---------- Trying to adjust quiz-container height 
                 to keep transition effect 
                 as well as width and display ---------- */
@@ -191,7 +199,7 @@ body {
         font-size: 25.25px;
     }
 
-    .answer, .review-question p {
+    .answer, .review-question p, .courtesy {
         font-size: 20.2px;
     }
 

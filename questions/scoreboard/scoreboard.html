@@ -65,8 +65,25 @@
         </section>
     </div>
 
+    <!-- Giving courtesy by Typed.Js -->
+    <p class="courtesy"></p>
+
     <h1 class="caution">Oops! <br>Please use screen width lesser than 930px!!!</h1>
 
     <script src="scoreboard.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <script>
+        let typed = new Typed('.courtesy', {
+            strings: ['Challenge by StackUp Community...',
+                        'Questions from proprofs.com...',
+                        'typed js by Matt Boldt...',
+                        'Coded by OMA_B.'],
+            typeSpeed: 85,
+            backSpeed: 10,
+            loop: true
+        });
+    </script>
 </body>
 </html>
