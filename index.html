@@ -22,15 +22,36 @@
         <!-- Instructions Section -->
         <div class="instruction">
             <h2>Instructions:</h2>
-            <p>You can tap on or hover over the question to alter background.</p>
+            <p class="typed"></p>
         </div>
 
         <!-- Start Button -->
-        <a href="#" class="start-button">START</a>
+        <a href="/Smarty-Quiz-Game/questions/question1.html" class="start-button">START</a>
         
     </div>
 
     <h1 class="caution">Oops! <br>Please use screen width lesser than 930px!!!</h1>
     
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <script>
+
+        let typed = new Typed('.typed', {
+            strings: ['Time to test your IQ Level!',
+                        'You only have 20 seconds to answer each question.',
+                        'You can tap on or hover over the question to alter background.',
+                        'You have the liberty to click an answer once, so careful!',
+                        'If you can\'t or don\'t want to answer a question...',
+                        '...you can simply skip by clicking on the >> button.',
+                        'After answering all questions, click on "End Game" to view your score.',
+                        'Solutions will be made available on the Score Board page.',
+                        'You can start now...',
+                        'GOODLUCK!'],
+            typeSpeed: 100,
+            backSpeed: 10,
+            loop: true
+        });
+
+    </script>
 </body>
 </html>

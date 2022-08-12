@@ -1,6 +1,3 @@
-// const tips = [`Time to test your IQ Level, by answering in 20s!`, 
-//             `You can tap on or hover over the question to alter background.`];
-
 // setting custom timer countdown...
 let timer = document.querySelector('.timer');
 const time = [20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1];
